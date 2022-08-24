@@ -1,0 +1,25 @@
+spring:
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: postgres://hxeonxaszezxeb:17a4fc588c220106b62e396e152e0bf054361d978f24f5ffd1d4eefb622f895c@ec2-52-30-67-143.eu-west-1.compute.amazonaws.com:5432/ddpto0uj0edkvh
+    username: hxeonxaszezxeb
+    password: 17a4fc588c220106b62e396e152e0bf054361d978f24f5ffd1d4eefb622f895c
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: ${PORT:8189}
+
+jwt:
+  secret: axioma-app
+  expiration: 604800
+  header: Authorization
+
